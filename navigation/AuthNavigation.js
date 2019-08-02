@@ -1,22 +1,19 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import Signup from  "../screens/Auth/Signup";
+import Signup from "../screens/Auth/Signup";
 import Confirm from "../screens/Auth/Confirm";
 import Login from "../screens/Auth/Login";
 import AuthHome from "../screens/Auth/AuthHome";
 
- const AuthNavigation = createStackNavigator(
+const AuthNavigation = createStackNavigator(
   {
     Login,
+    Confirm,
     AuthHome,
-    Signup,
-    Confirm
+    Signup
   },
   {
-    headerMode: "none",
-    defaultNavigationOptions: {
-      gesturesEnabled: true
-    }
+    headerMode: "none"
   }
 );
 
- export default createAppContainer(AuthNavigation);
+export default createAppContainer(AuthNavigation);
